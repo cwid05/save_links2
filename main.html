@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <body>
+    <h1>Save Links for Later</h1>
+    <p>Enter a URL to save or a term to search through previously saved links:
+    </p>
+
+    <form action="/savelinks" method="post">
+      <div><textarea name="content" rows="3" cols="60"></textarea></div>
+      <div><input type="submit" value="Learn All the Things!"></div>
+    </form>
+
+    <hr>
+
+    <a href="{{ url|safe }}">{{ url_linktext }}</a> {{ cur_user }}
+  </body>
+</html>
+{% endautoescape %}
